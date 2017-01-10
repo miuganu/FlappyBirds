@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include<iostream>
+#include <windows.h>
 using namespace std;
 
 void sfarsitjoc() 
@@ -51,5 +52,22 @@ void meniu()
 	cout << "                  3: Exit        " << endl << endl;
 }
 
+void screen() 
+{
+    int x,y;
+    system("cls");  
 
+
+    for(y=0;y<25;y++) 
+    {
+        for(x=0;x<30;x++)
+        {
+            if(x<29) cout<<afisaj[x][y];
+            if(x==29) cout<<afisaj[x][y]<<endl;
+        }
+    }
+
+    cout<<"Scorul tau: "<<scor;
+    cout<<""<<endl;
+}
 
